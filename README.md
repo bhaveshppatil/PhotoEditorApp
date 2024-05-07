@@ -3,6 +3,14 @@
 
 Welcome to the SwiftUI Image Editor App! This app allows users to capture or select images from the photo library, add text to them, apply filters, and share the edited images.
 
+## Screenshots
+
+<div style="display: flex; justify-content: center;">
+  <img src="PhotoEditorSample/screenshot1.png" width="250" />
+  <img src="PhotoEditorSample/Screenshot2.png" width="250" />
+  <img src="PhotoEditorSample/Screenshot3.png" width="250" />
+</div>
+
 ## Features
 
 - Capture or select images from the photo library.
@@ -43,11 +51,5 @@ git clone https://github.com/bhaveshppatil/PhotoEditorApp.git
 4. Customize the text font, color, and alignment as needed.
 5. Apply filters to the image by selecting one from the available options.
 6. Share the edited image by tapping the "Share" button.
-
-## Screenshots
-
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
-![Screenshot 3](screenshots/screenshot3.png)
 
 ---
