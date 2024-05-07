@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7122A38E2BEA0CDF00B83353 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122A38D2BEA0CDF00B83353 /* TextExtension.swift */; };
+		7122A3912BEA0F2800B83353 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122A3902BEA0F2800B83353 /* PrimaryButton.swift */; };
 		719DFF402BE8E401007ACDD0 /* PhotoEditorAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF3F2BE8E401007ACDD0 /* PhotoEditorAppApp.swift */; };
 		719DFF422BE8E401007ACDD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF412BE8E401007ACDD0 /* ContentView.swift */; };
 		719DFF442BE8E403007ACDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719DFF432BE8E403007ACDD0 /* Assets.xcassets */; };
@@ -14,6 +16,13 @@
 		719DFF522BE8E403007ACDD0 /* PhotoEditorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF512BE8E403007ACDD0 /* PhotoEditorAppTests.swift */; };
 		719DFF5C2BE8E403007ACDD0 /* PhotoEditorAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF5B2BE8E403007ACDD0 /* PhotoEditorAppUITests.swift */; };
 		719DFF5E2BE8E403007ACDD0 /* PhotoEditorAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF5D2BE8E403007ACDD0 /* PhotoEditorAppUITestsLaunchTests.swift */; };
+		719DFF6C2BE8E642007ACDD0 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF6B2BE8E642007ACDD0 /* CaptureView.swift */; };
+		719DFF6F2BE8E67E007ACDD0 /* CaptureImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF6E2BE8E67E007ACDD0 /* CaptureImageExtension.swift */; };
+		719DFF722BE8E6BC007ACDD0 /* ShareImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF712BE8E6BC007ACDD0 /* ShareImage.swift */; };
+		719DFF762BE8EA9B007ACDD0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF752BE8EA9B007ACDD0 /* ImagePicker.swift */; };
+		719DFF792BE8F4EE007ACDD0 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF782BE8F4EE007ACDD0 /* FilterManager.swift */; };
+		719DFF7B2BE8FC38007ACDD0 /* FilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF7A2BE8FC38007ACDD0 /* FilterExtension.swift */; };
+		719DFF7D2BE93188007ACDD0 /* FilterThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFF7C2BE93188007ACDD0 /* FilterThumbnail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7122A38D2BEA0CDF00B83353 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		7122A3902BEA0F2800B83353 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		719DFF3C2BE8E401007ACDD0 /* PhotoEditorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoEditorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719DFF3F2BE8E401007ACDD0 /* PhotoEditorAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorAppApp.swift; sourceTree = "<group>"; };
 		719DFF412BE8E401007ACDD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +56,13 @@
 		719DFF572BE8E403007ACDD0 /* PhotoEditorAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoEditorAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		719DFF5B2BE8E403007ACDD0 /* PhotoEditorAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorAppUITests.swift; sourceTree = "<group>"; };
 		719DFF5D2BE8E403007ACDD0 /* PhotoEditorAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		719DFF6B2BE8E642007ACDD0 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
+		719DFF6E2BE8E67E007ACDD0 /* CaptureImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageExtension.swift; sourceTree = "<group>"; };
+		719DFF712BE8E6BC007ACDD0 /* ShareImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareImage.swift; sourceTree = "<group>"; };
+		719DFF752BE8EA9B007ACDD0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		719DFF782BE8F4EE007ACDD0 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
+		719DFF7A2BE8FC38007ACDD0 /* FilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterExtension.swift; sourceTree = "<group>"; };
+		719DFF7C2BE93188007ACDD0 /* FilterThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterThumbnail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7122A38F2BEA0F0100B83353 /* design */ = {
+			isa = PBXGroup;
+			children = (
+				7122A3902BEA0F2800B83353 /* PrimaryButton.swift */,
+			);
+			path = design;
+			sourceTree = "<group>";
+		};
 		719DFF332BE8E401007ACDD0 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +121,10 @@
 		719DFF3E2BE8E401007ACDD0 /* PhotoEditorApp */ = {
 			isa = PBXGroup;
 			children = (
+				719DFF772BE8F4D3007ACDD0 /* imageFilter */,
+				719DFF702BE8E6B0007ACDD0 /* shareImage */,
+				719DFF6D2BE8E665007ACDD0 /* extension */,
+				719DFF6A2BE8E633007ACDD0 /* capture */,
 				719DFF3F2BE8E401007ACDD0 /* PhotoEditorAppApp.swift */,
 				719DFF412BE8E401007ACDD0 /* ContentView.swift */,
 				719DFF432BE8E403007ACDD0 /* Assets.xcassets */,
@@ -127,6 +157,43 @@
 				719DFF5D2BE8E403007ACDD0 /* PhotoEditorAppUITestsLaunchTests.swift */,
 			);
 			path = PhotoEditorAppUITests;
+			sourceTree = "<group>";
+		};
+		719DFF6A2BE8E633007ACDD0 /* capture */ = {
+			isa = PBXGroup;
+			children = (
+				719DFF6B2BE8E642007ACDD0 /* CaptureView.swift */,
+				719DFF752BE8EA9B007ACDD0 /* ImagePicker.swift */,
+			);
+			path = capture;
+			sourceTree = "<group>";
+		};
+		719DFF6D2BE8E665007ACDD0 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				7122A38F2BEA0F0100B83353 /* design */,
+				719DFF6E2BE8E67E007ACDD0 /* CaptureImageExtension.swift */,
+				719DFF7A2BE8FC38007ACDD0 /* FilterExtension.swift */,
+				7122A38D2BEA0CDF00B83353 /* TextExtension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		719DFF702BE8E6B0007ACDD0 /* shareImage */ = {
+			isa = PBXGroup;
+			children = (
+				719DFF712BE8E6BC007ACDD0 /* ShareImage.swift */,
+			);
+			path = shareImage;
+			sourceTree = "<group>";
+		};
+		719DFF772BE8F4D3007ACDD0 /* imageFilter */ = {
+			isa = PBXGroup;
+			children = (
+				719DFF782BE8F4EE007ACDD0 /* FilterManager.swift */,
+				719DFF7C2BE93188007ACDD0 /* FilterThumbnail.swift */,
+			);
+			path = imageFilter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +327,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				719DFF422BE8E401007ACDD0 /* ContentView.swift in Sources */,
+				7122A3912BEA0F2800B83353 /* PrimaryButton.swift in Sources */,
 				719DFF402BE8E401007ACDD0 /* PhotoEditorAppApp.swift in Sources */,
+				7122A38E2BEA0CDF00B83353 /* TextExtension.swift in Sources */,
+				719DFF6C2BE8E642007ACDD0 /* CaptureView.swift in Sources */,
+				719DFF762BE8EA9B007ACDD0 /* ImagePicker.swift in Sources */,
+				719DFF722BE8E6BC007ACDD0 /* ShareImage.swift in Sources */,
+				719DFF7B2BE8FC38007ACDD0 /* FilterExtension.swift in Sources */,
+				719DFF7D2BE93188007ACDD0 /* FilterThumbnail.swift in Sources */,
+				719DFF6F2BE8E67E007ACDD0 /* CaptureImageExtension.swift in Sources */,
+				719DFF792BE8F4EE007ACDD0 /* FilterManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
