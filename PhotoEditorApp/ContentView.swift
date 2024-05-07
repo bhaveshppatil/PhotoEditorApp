@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import UIKit
+import Photos
 
 struct ContentView: View {
     @State private var showCaptureImageView = false
@@ -17,6 +19,7 @@ struct ContentView: View {
     @State private var isShowingShareSheet = false
     @State private var editedImage: UIImage?
     @State private var isFilterApplied = false
+    @State private var isSaved = false
     @State private var filteredImage: UIImage?
     @StateObject var filterMaker = FilterManager()
     @State private var selectedFilter: Filters = .normalImage
@@ -62,8 +65,10 @@ struct ContentView: View {
                                 if let filteredImage = filterMaker.applyFilter(filter, selectedImageForFilter: image) {
                                     FilterThumbnail(image: filteredImage, isSelected: selectedFilter == filter)
                                         .onTapGesture {
+                                            isSaved = false
                                             isFilterApplied = true
                                             self.filteredImage = filteredImage
+                                            self.editedImage = filteredImage
                                         }
                                 }
                             }
@@ -84,15 +89,18 @@ struct ContentView: View {
                 }
                 HStack {
                     createButton("Take a Photo") {
+                        isSaved = false
                         showCaptureImageView.toggle()
                     }
                     
-                    createButton("Add Text") {
-                        isEditingText.toggle()
+                    if selectedImage != nil {
+                        createButton("Add Text") {
+                            isEditingText.toggle()
+                        }
+                        .animation(.easeInOut)
                     }
-                    .animation(.linear)
-                    
                     createButton("From Photos") {
+                        isSaved = false
                         editedImage == nil
                         isFilterApplied = false
                         isShowingImagePicker.toggle()
@@ -105,12 +113,21 @@ struct ContentView: View {
                 .frame(width: geometry.size.width)
                 
                 if editedImage != nil {
-                    createButton("Share") {
-                        isShowingShareSheet.toggle()
+                    HStack {
+                        createButton("Share") {
+                            isShowingShareSheet.toggle()
+                        }
+                        .sheet(isPresented: $isShowingShareSheet) {
+                            ShareSheet(activityItems: [self.editedImage!])
+                        }
+                            createButton("Save") {
+                                saveImageToPhotos(imageToSave: self.editedImage ?? UIImage())
+                            }
+                    
                     }
-                    .sheet(isPresented: $isShowingShareSheet) {
-                        ShareSheet(activityItems: [self.editedImage!])
-                    }
+                }
+                if isSaved {
+                    Text("Image saved to Photos.")
                 }
             }
             .padding()
@@ -138,7 +155,7 @@ struct ContentView: View {
         UIGraphicsBeginImageContextWithOptions(imageSize, false, scale)
         image.draw(at: .zero)
         
-        let fontSize: CGFloat = 100 // Adjust font size here
+        let fontSize: CGFloat = 100
         let textFont = UIFont.systemFont(ofSize: fontSize)
         let textColor = UIColor.black
         let textAlignment = NSTextAlignment.center
@@ -160,6 +177,38 @@ struct ContentView: View {
         return newImage ?? image
     }
     
+    func saveImageToPhotos(imageToSave: UIImage) {
+        // Request permission to access the photo library
+        PHPhotoLibrary.requestAuthorization { status in
+            switch status {
+            case .authorized:
+                // Permission granted, save the image
+                saveImage(imageToSave: imageToSave)
+            case .denied, .restricted:
+                // Permission denied or restricted
+                print("Permission to access photo library was not granted.")
+            case .notDetermined:
+                // User has not yet made a decision
+                print("User has not yet made a decision regarding access to photo library.")
+            @unknown default:
+                print("Unknown authorization status.")
+            }
+        }
+    }
+
+    private func saveImage(imageToSave: UIImage) {
+        PHPhotoLibrary.shared().performChanges {
+            let request = PHAssetChangeRequest.creationRequestForAsset(from: imageToSave)
+            request.creationDate = Date() // Optionally set creation date
+        } completionHandler: { success, error in
+            if success {
+                print("Image saved to Photos.")
+            } else {
+                print("Error saving image to Photos:", error?.localizedDescription ?? "")
+            }
+        }
+    }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
