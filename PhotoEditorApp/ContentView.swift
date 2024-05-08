@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
 import Photos
 
 struct ContentView: View {
@@ -46,7 +45,7 @@ struct ContentView: View {
                                 Spacer().frame(height: 50)
                                 
                                 Button("Done") {
-                                    editedImage = addTextToImage(image: image, text: editText)
+                                    editedImage = addTextToImage(image: editedImage ?? image, text: editText)
                                     isEditingText = false
                                 }
                                 .padding()
@@ -58,6 +57,10 @@ struct ContentView: View {
                         }
                     }
                     .padding()
+                    
+                    if isSaved {
+                        Text("Image saved to Photos.")
+                    }
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {
@@ -101,7 +104,7 @@ struct ContentView: View {
                     }
                     createButton("From Photos") {
                         isSaved = false
-                        editedImage == nil
+                        editedImage = nil
                         isFilterApplied = false
                         isShowingImagePicker.toggle()
                     }
@@ -125,9 +128,6 @@ struct ContentView: View {
                             }
                     
                     }
-                }
-                if isSaved {
-                    Text("Image saved to Photos.")
                 }
             }
             .padding()
@@ -202,6 +202,7 @@ struct ContentView: View {
             request.creationDate = Date() // Optionally set creation date
         } completionHandler: { success, error in
             if success {
+                isSaved = true
                 print("Image saved to Photos.")
             } else {
                 print("Error saving image to Photos:", error?.localizedDescription ?? "")
