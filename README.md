@@ -18,6 +18,7 @@ Welcome to the SwiftUI Image Editor App! This app allows users to capture or sel
 - Apply various filters to enhance images.
 - Share edited images via other apps.
 - Simple and intuitive user interface.
+- Allowing to save editted image to local.
 
 ## Tech Stack
 
