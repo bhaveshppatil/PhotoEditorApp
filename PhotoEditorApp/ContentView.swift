@@ -26,7 +26,7 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                if let image = selectedImage {
+                if let image = showCaptureImageView ? capturedImage : selectedImage {
                     ZStack(alignment: .topLeading) {
                         Image(uiImage: (editedImage ?? (isFilterApplied ? filteredImage : image)) ?? UIImage())
                             .resizable()
@@ -93,6 +93,7 @@ struct ContentView: View {
                 HStack {
                     createButton("Take a Photo") {
                         isSaved = false
+                        selectedImage = nil
                         showCaptureImageView.toggle()
                     }
                     
